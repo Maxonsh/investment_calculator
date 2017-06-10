@@ -1,0 +1,30 @@
+.row
+ .card
+  .card-block
+    h3.card-title Калькулятор инвестора
+    .amount.row
+      .col-2 Сумма вклада
+      .col-3
+        = number_field_tag 'amount', nil, class: 'form-control', id: 'amount_input'
+      .sign руб.
+      .col-3
+        button.btn.btn-primary onclick="IC.calculateYield();" type="button" Рассчитать
+    .form-group.row
+      .col-left Срок
+      .col-right 6 месяцев
+    .form-group.row
+      .col-left Годовая доходность реалистично
+      .col-right
+        span#realistic_annual_yield data-value="#{@annual_yield_realistically}" = "#{@annual_yield_realistically * 100}%"
+    .form-group.row
+      .col-left Годовая доходность оптимистично
+      .col-right
+        span#optimistic_annual_yield 30%
+    .form-group.row
+      .col-left Ожидаемая доходность
+      .col-right
+        span#expected_yield
+    .form-group.row
+      .col-left Историческая доходность
+      .col-right
+        span#historical_yield

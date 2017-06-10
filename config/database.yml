@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: UTF8
+  database: investment_calculator_dev
+  username: calculator
+  password: 123gFd
+  host: localhost
+  pool: 25
+
+test:
+  adapter: postgresql
+  encoding: UTF8
+  database: investment_calculator_test
+  username: calculator
+  password: 123gFd
+  host: localhost
+  pool: 25
